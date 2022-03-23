@@ -5,7 +5,7 @@ console.log(db.product);
 
 exports.getAllProduct = async(req, res)=>{
     const products = await Product.findAll({
-        attributes: ['productName', 'id']
+        attributes: ['productName']
     });
     if (!products) {   
         return res.status(400).send(`err: no product found`)

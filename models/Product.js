@@ -17,7 +17,7 @@ const product =(sequelize,  DataTypes)=>{
             freezeTableName:true
         }
         );
-        Product.sync({force:true});
+        Product.sync();
         return Product;
     }
 
